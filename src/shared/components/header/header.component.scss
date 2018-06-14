@@ -1,0 +1,15 @@
+.active{
+    color: #176887 !important;
+    background-color: #f9f9f9!important;    
+}
+.navbar{
+    margin-bottom: 0 !important;
+    background-color: #176887;
+    border-radius: 0;
+    .navbar-brand{
+        color: #ffffff!important;
+        &:hover{
+            color: #ffffff!important;
+        }
+    }
+}

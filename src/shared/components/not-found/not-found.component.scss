@@ -1,0 +1,28 @@
+.not-found-dms{
+    width: 100%;
+    text-align: center;
+    font-size: 21px;
+    margin-top: 13%;
+    p{
+        font-size: 15px;
+    }
+}
+
+.btn-not-found{
+    background-color: #176887;
+    color: #ffffff;
+    outline: none;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 0;
+    &:hover{
+        background-color: #176887;
+    }
+}
+
+.error-code{
+    font-size: 55px!important;
+    color: #b56262;
+    margin-bottom: 0;
+    font-family: -webkit-pictograph;
+}

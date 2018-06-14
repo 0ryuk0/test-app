@@ -1,0 +1,35 @@
+<section class="cards-container">
+  <div class="row display-flex">
+    <div *ngFor="let $index=index;let card of cards" class="col-12 col-md-4 col-sm-6 col-lg-4">
+        <div class="card">
+            <div class="card-header d-card-header">
+                <h4 class="card-title">{{card.title}}
+                  <span *ngIf="!card.isFavorite"><i class="glyphicon glyphicon-star-empty" (click)="setFavorite(true, $index)"></i></span>
+                  <span *ngIf="card.isFavorite"><i class="glyphicon glyphicon-star" (click)="setFavorite(false, $index)"></i></span>
+                </h4>
+            </div>
+
+            <div class="card-block d-card-block">
+                <div class="d-card-block-desc">
+                    <p>{{card.info}}</p>
+                </div>
+              </div>
+              <div>
+                <a (click)="openDialog(card)">info</a>
+              </div>
+            <div class="card-footer d-card-footer">
+                <button class="btn btn-dashboard float-right" [routerLink]="['/card/', card._id]">More Details</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- info-dialog-->
+<app-dialog [visible]="isShow.infoDialog" [headerText]="'Information'"(dialogEvents) = "infoDialogEvents($event)">
+    <section class="info-dialog">
+      <h4>{{currentInfoObject.title}}</h4>
+      <p>{{currentInfoObject.description}}</p>
+    </section>
+</app-dialog>

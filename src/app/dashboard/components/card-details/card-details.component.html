@@ -1,0 +1,18 @@
+<section class="card-details-container">
+  <div class="row">
+    <div class="col-xs-6 col-sm-5 col-md-4 col-lg-4 left-section" style = "background-image: url(assets/images/brick.png)">
+      <div class="fav-icon-main">
+        <span *ngIf="!card.isFavorite"><i class="glyphicon glyphicon-star-empty"></i></span>
+        <span *ngIf="card.isFavorite"><i class="glyphicon glyphicon-star"></i></span>
+      </div>
+      <p>
+        {{card.title}}
+        <br><small>{{card.info}}</small>
+      </p>
+    </div>
+    <div class="col-xs-6 col-sm-7 col-md-8 col-lg-8 right-section">
+      <div><small>Company: </small> <span>{{card.company}}</span></div>
+      <div><small>Detail: </small><span>{{card.description}}</span></div>
+    </div>
+  </div>
+</section>
