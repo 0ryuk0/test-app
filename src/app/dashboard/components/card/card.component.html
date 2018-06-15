@@ -1,11 +1,12 @@
 <section class="cards-container">
+  <span (click)="showAllFav()">Show All Fav</span>
   <div class="row display-flex">
-    <div *ngFor="let $index=index;let card of cards" class="col-12 col-md-4 col-sm-6 col-lg-4">
+    <div *ngFor="let $index=index;let card of cardData" class="col-12 col-md-4 col-sm-6 col-lg-4">
         <div class="card">
             <div class="card-header d-card-header">
                 <h4 class="card-title">{{card.title}}
-                  <span *ngIf="!card.isFavorite"><i class="glyphicon glyphicon-star-empty" (click)="setFavorite(true, $index)"></i></span>
-                  <span *ngIf="card.isFavorite"><i class="glyphicon glyphicon-star" (click)="setFavorite(false, $index)"></i></span>
+                  <span *ngIf="!card.isFavourite"><i class="glyphicon glyphicon-star-empty" (click)="card.isFavourite=!card.isFavourite"></i></span>
+                  <span *ngIf="card.isFavourite"><i class="glyphicon glyphicon-star" (click)="card.isFavourite=!card.isFavourite"></i></span>
                 </h4>
             </div>
 
